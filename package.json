@@ -1,0 +1,23 @@
+{
+  "name": "minishop-migration",
+  "version": "1.0.0",
+  "type": "module",
+  "workspaces": [
+    "Frontend_Admin",
+    "Frontend_Dashboard_User",
+    "Frontend_Mobile_APP",
+    "Frontend_Reseller",
+    "Frontend_Telegram_Mini_APP",
+    "Frontend_User"
+  ],
+  "scripts": {
+    "dev": "npm run build:frontend && node server.js",
+    "build:frontend": "npm run build --workspace=Frontend_User",
+    "build": "npm run build:frontend",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "cors": "^2.8.5"
+  }
+}
